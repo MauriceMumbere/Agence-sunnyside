@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: "Barlow", sans-serif;
+}
+/*************************************\
+            Header style
+\*************************************/
+header{
+    height: 100vh;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 3%;
+    background-color: rgb(62, 191, 255);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+header nav a{
+    color: #ffffff;
+}
+header nav .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:  "Fraunces", serif;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+header .cta-contact{
+    background-color: #ffffff;
+    font-family:  "Fraunces", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+header .cta-contact:hover{
+    background-color: rgb(120, 210, 255);
+    color: #ffffff;
+    transition: 0.3s;
+}
+header .header-content{
+    text-align: center;
+    padding-top: 12%;
+}
+header .header-content h2{
+    font-size: 4.5rem;
+    color: #ffffff;
+    font-family:  "Fraunces", serif;
+    letter-spacing: 0.5rem;
+    margin-bottom: 6%;
+}
+/*************************************\
+            Main style
+\*************************************/
+/********* Transform section  */
+.transform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.transform .transfor-gauche{
+    background-color:rgb(255, 251, 248);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:  25% 20%;
+}
+.transform .transfor-gauche h2{
+    font-family:  "Fraunces", serif;
+    font-size: 2rem;
+}
+.transform .transfor-gauche p{
+    padding: 7% 0;
+    font-weight: bold;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.548);
+}
+.transform .transfor-droite{
+    background-image: url(../images/desktop/image-transform.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.cta-transform{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    font-family: "Fraunces", serif;
+}
+.cta-transform::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 109%;
+    left: -5px;
+    top: 10px;
+    background-color: rgba(250, 212, 0, 0.363);
+    height: 11px;
+    border-radius: 5px;
+    z-index: -1;
+}
+.cta-transform:hover::after{
+    background-color: rgb(250, 212, 0);
+}
+/********* Audiance section */
+.audiance{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.audiance h2{
+    font-family:  "Fraunces", serif;
+    font-size: 2rem;
+}
+.audiance p{
+    padding: 7% 0;
+    font-weight: bold;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.548);
+}
+.audiance-gauche{
+    background-image: url(../images/desktop/image-stand-out.jpg);
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+.audiance-droite{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:  25% 20%;
+    background-color: rgb(255, 251, 248);
+}
+.cta-audiance{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    font-family: "Fraunces", serif;
+}
+.cta-audiance::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 109%;
+    left: -5px;
+    top: 10px;
+    background-color: rgba(255, 111, 98, 0.363);
+    height: 11px;
+    border-radius: 5px;
+    z-index: -1;
+}
+.cta-audiance:hover::after{
+    background-color: rgb(255, 112, 98);
+}
+/********* Design section  */
+.design-photo{
+    display: flex;
+}
+.design-photo h2{
+    font-size: 2rem;
+    font-family:  "Fraunces", serif;
+    margin-bottom: 4%;
+}
+.design-photo p{
+    font-size: 16px;
+}
+.design-photo-gauche{
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    height: 600px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4% 10%;
+    text-align: center;
+}
+.design-photo-droite{
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4% 12%;
+    text-align: center;
+}
+/********* Testimonials section  */
+.testimonials{
+    text-align: center;
+    font-family: "Fraunces", serif;
+    background-color: rgb(255, 251, 248);
+    padding: 15% 10%;
+}
+.testimonials-content{
+    display: flex;
+    gap: 10%;
+}
+.testimonials h2{
+    margin-bottom: 5%;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+.testimonials p{
+    padding: 7% 0;
+    color: rgba(0, 0, 0, 0.336);
+    font-weight: bold;
+}
+.testimonials h3{
+    padding-bottom: 2%;
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+}
+.testimonials h2, span{
+    color: rgba(0, 0, 0, 0.356);
+}
+.testimonials span{
+    font-weight: bold;
+}
+.testimonials img{
+    border-radius: 50%;
+}
+/********* Flavor section  */
+.flavor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.flavor img{
+    width: 100%;
+    height: 100%;
+}
+/*************************************\
+            Footer style
+\*************************************/
+footer{
+    background-color: rgb(145, 212, 198);
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content .logo2{
+    height: 35px;
+}
+.footer-content ul{
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    margin: 10% 0 30% 0;
+}
+.footer-content ul li a{
+    font-weight: bold;
+    color: #2B7362;
+}
+.footer-content ul li a:hover{
+    color: #ffffff;
+}
+.footer-content .social-link{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+}
+/*************************************\
+            Medi Queries
+\*************************************/
+.menu{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    /******** menu  */
+    .menu{
+        display: block;
+    }
+    .menu input{
+        display: none;
+    }
+    .ul-hidden{
+        display: none;
+    }
+    /********* transform section  */
+    .transform{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .transform .transfor-droite{
+        width: 100%;
+        height: 100%;
+    }
+    .transform .transfor-gauche{
+        width: 100%;
+        height: 100%;
+    }
+    /*********testimonials sections  */
+    .testimonials-content{
+        flex-direction: column;
+        margin-top: 5%;
+    }
+}
