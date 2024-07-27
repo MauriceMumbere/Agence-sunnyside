@@ -56,7 +56,7 @@ header .cta-contact:hover{
 }
 header .header-content{
     text-align: center;
-    padding-top: 12%;
+    padding-top: 8%;
 }
 header .header-content h2{
     font-size: 4.5rem;
@@ -65,41 +65,53 @@ header .header-content h2{
     letter-spacing: 0.5rem;
     margin-bottom: 6%;
 }
+header .arrow-dawn{
+    animation: arrow 2s infinite ease-in-out;
+}
+@keyframes arrow{
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(40px);
+    }
+}
 /*************************************\
             Main style
 \*************************************/
-/********* Transform section  */
-.transform{
+/********* About section  */
+.about{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.transform .transfor-gauche{
-    background-color:rgb(255, 251, 248);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding:  25% 20%;
+.about-box__contente{
+    padding: 25% 20%;
 }
-.transform .transfor-gauche h2{
+.about-box h2{
     font-family:  "Fraunces", serif;
     font-size: 2rem;
 }
-.transform .transfor-gauche p{
+.about-box p{
     padding: 7% 0;
     font-weight: bold;
     line-height: 1.5rem;
     color: rgba(0, 0, 0, 0.548);
 }
-.transform .transfor-droite{
+.about-box-img1{
     background-image: url(../images/desktop/image-transform.jpg);
+    background-position: center;
     background-size: cover;
     height: 100%;
     width: 100%;
 }
-.cta-transform{
+.about-box-img2{
+    background-image: url(../images/desktop/image-stand-out.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.about-cta1{
     text-transform: uppercase;
     font-weight: bold;
     position: relative;
@@ -107,7 +119,7 @@ header .header-content h2{
     font-size: 16px;
     font-family: "Fraunces", serif;
 }
-.cta-transform::after{
+.about-cta1::after{
     content: "";
     display: block;
     position: absolute;
@@ -119,41 +131,10 @@ header .header-content h2{
     border-radius: 5px;
     z-index: -1;
 }
-.cta-transform:hover::after{
+.about-cta1:hover::after{
     background-color: rgb(250, 212, 0);
 }
-/********* Audiance section */
-.audiance{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.audiance h2{
-    font-family:  "Fraunces", serif;
-    font-size: 2rem;
-}
-.audiance p{
-    padding: 7% 0;
-    font-weight: bold;
-    line-height: 1.5rem;
-    color: rgba(0, 0, 0, 0.548);
-}
-.audiance-gauche{
-    background-image: url(../images/desktop/image-stand-out.jpg);
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-}
-.audiance-droite{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding:  25% 20%;
-    background-color: rgb(255, 251, 248);
-}
-.cta-audiance{
+.about-cta2{
     text-transform: uppercase;
     font-weight: bold;
     position: relative;
@@ -161,7 +142,7 @@ header .header-content h2{
     font-size: 16px;
     font-family: "Fraunces", serif;
 }
-.cta-audiance::after{
+.about-cta2::after{
     content: "";
     display: block;
     position: absolute;
@@ -173,7 +154,7 @@ header .header-content h2{
     border-radius: 5px;
     z-index: -1;
 }
-.cta-audiance:hover::after{
+.about-cta2:hover::after{
     background-color: rgb(255, 112, 98);
 }
 /********* Design section  */
@@ -190,6 +171,7 @@ header .header-content h2{
 }
 .design-photo-gauche{
     background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-position: center;
     background-size: cover;
     height: 600px;
     width: 50%;
@@ -201,7 +183,9 @@ header .header-content h2{
 }
 .design-photo-droite{
     background-image: url(../images/desktop/image-photography.jpg);
+    background-position: center;
     background-size: cover;
+    height: 600px;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -221,9 +205,10 @@ header .header-content h2{
     gap: 10%;
 }
 .testimonials h2{
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     font-size: 2rem;
     letter-spacing: 0.2rem;
+    font-family: "Fraunces", serif;
 }
 .testimonials p{
     padding: 7% 0;
@@ -240,6 +225,7 @@ header .header-content h2{
 }
 .testimonials span{
     font-weight: bold;
+    
 }
 .testimonials img{
     border-radius: 50%;
@@ -258,7 +244,7 @@ header .header-content h2{
 \*************************************/
 footer{
     background-color: rgb(145, 212, 198);
-    padding: 5% 0;
+    padding: 10% 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,7 +258,7 @@ footer{
 .footer-content ul{
     display: flex;
     list-style: none;
-    gap: 5rem;
+    gap: 2rem;
     margin: 10% 0 30% 0;
 }
 .footer-content ul li a{
@@ -286,7 +272,7 @@ footer{
     display: flex;
     text-align: center;
     justify-content: center;
-    gap: 40px;
+    gap: 5%;
 }
 /*************************************\
             Medi Queries
@@ -294,8 +280,61 @@ footer{
 .menu{
     display: none;
 }
+.check{
+    display: none;
+}
+@media screen and (max-width:425px) {
+    /* about section */
+    .about{
+        display: block;
+    }
+    .about-box-img1{
+        background-image: url(../images/mobile/image-transform.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 600px;
+    }
+    .about-box-img2{
+        background-image: url(../images/mobile/image-stand-out.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 600px;
+    }
+    /* design-photo section */
+    .design-photo{
+        flex-direction: column;
+    }
+    .design-photo-gauche{
+        background-image: url(../images/mobile/image-graphic-design.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+    .design-photo-droite{
+        background-image: url(../images/mobile/image-photography.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+    /****** flavor section  */
+    .flavor{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media screen and (max-width: 768px){
     /******** menu  */
+    header{
+        position: relative;
+    }
+    header nav{
+        position: fixed;
+    }
+    header .header-content{
+        padding-top: 20%;
+    }
+    header .header-content h2{
+        font-size: 2rem;
+    }
     .menu{
         display: block;
     }
@@ -303,24 +342,42 @@ footer{
         display: none;
     }
     .ul-hidden{
-        display: none;
-    }
-    /********* transform section  */
-    .transform{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .transform .transfor-droite{
+        position: absolute;
+        top: 45px;
+        left: 0;
+        line-height: 5rem;
         width: 100%;
-        height: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(62, 191, 255);
+        left: -100%;
+        transition: 0.5s;
     }
-    .transform .transfor-gauche{
-        width: 100%;
-        height: 100%;
+    .ul-hidden a{
+        font-size: 2rem;
+    }
+    .check:checked ~ ul{
+        left: 0;
+    }
+    /********* about section  */
+    .about{
+        text-align: center;
+    }
+    /********* design photo section */
+    .design-photo h2{
+        font-size: 1.5rem;
     }
     /*********testimonials sections  */
     .testimonials-content{
         flex-direction: column;
         margin-top: 5%;
+        gap: 60px;
+    }
+    .testimonials h2{
+        font-size: 1.3rem;
     }
 }
